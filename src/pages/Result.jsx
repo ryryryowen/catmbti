@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import styled from "styled-components";
-import { Button } from "react-bootstrap";
+import { Button, ButtonGroup } from "react-bootstrap";
 import { ResultData } from "../assets/resultdata";
+import KakaoShareButton from "../components/KakaoShareButton";
 
 const Wrapper = styled.div`
   display: flex;
@@ -48,6 +49,11 @@ const Desc = styled.div`
   border-radius: 8px;
 `;
 
+const ButtonGoup = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
 const Result = () => {
   const [resultData, setResultData] = useState({});
   const [serachPrams] = useSearchParams();
@@ -74,7 +80,10 @@ const Result = () => {
         <Desc>
           예비집사님과 찰떡궁합인 고양이는 {resultData.best}형 {resultData.name}
         </Desc>
-        <Button onClick={handleClickButton}>테스트 다시시작하기</Button>
+        <ButtonGoup>
+          <Button onClick={handleClickButton}>테스트 다시시작하기</Button>
+          <KakaoShareButton />
+        </ButtonGoup>
       </Contents>
     </Wrapper>
   );
