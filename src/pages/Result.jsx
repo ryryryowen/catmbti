@@ -44,7 +44,7 @@ const Desc = styled.div`
 `;
 
 const Result = () => {
-  const [gresultData, setResultData] = useState({});
+  const [resultData, setResultData] = useState({});
   const [serachPrams] = useSearchParams();
   const mbti = serachPrams.get("mbti");
   const navigate = useNavigate();
