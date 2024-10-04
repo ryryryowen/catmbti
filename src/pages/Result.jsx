@@ -3,7 +3,6 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "react-bootstrap";
 import { ResultData } from "../assets/resultData";
-
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
